@@ -1,0 +1,2 @@
+insert into despesa (referencia,copel_leitura_anterior,copel_leitura_atual) values ('2301',68722,69070);
+insert into despesa (referencia,copel_leitura_anterior,copel_leitura_atual) values ('2302',68723,69071);
