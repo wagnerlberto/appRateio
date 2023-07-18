@@ -35,4 +35,8 @@ public class DespesaService {
   public Despesa salvar( Despesa despesa ){
     return repository.save(despesa);
   }  
+  
+  public void deletar(Despesa despesa){
+    repository.delete(despesa);
+  }  
 }
