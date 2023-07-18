@@ -1,6 +1,7 @@
 package br.com.empresa.appRateio.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,4 +23,13 @@ public class DespesaService {
      lista.stream().map(item->new DespesaDto(item)).toList();
     return listaDto;
   }
+  
+  public Optional<DespesaDto> encontrarPeloId(Long id){
+    
+    Optional<Despesa> objeto = repository.findById(id);
+    Optional<DespesaDto> objetoDto = 
+        objeto.map(item->new DespesaDto(item));
+    return objetoDto;
+  }
+
 }
