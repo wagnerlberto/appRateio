@@ -31,5 +31,8 @@ public class DespesaService {
         objeto.map(item->new DespesaDto(item));
     return objetoDto;
   }
-
+  
+  public Despesa salvar( Despesa despesa ){
+    return repository.save(despesa);
+  }  
 }

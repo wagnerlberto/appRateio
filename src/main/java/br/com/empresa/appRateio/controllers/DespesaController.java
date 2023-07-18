@@ -32,4 +32,8 @@ public class DespesaController {
     return service.encontrarPeloId(id);
   }
 
+  @PostMapping
+  public Despesa salvar( @RequestBody Despesa despesa ){
+    return service.salvar(despesa);
+  } 
 }
